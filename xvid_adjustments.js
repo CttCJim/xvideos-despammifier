@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024-03-26
+// @version      2024-04-15
 // @description  try to take over the world!
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
