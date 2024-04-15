@@ -24,6 +24,7 @@
         $(".red-ticket").closest("li").remove(); //remove red from top menu
         $(".btn.btn-default.premium").hide(); //remove red tab on channel
         $(".banner-goto-redtab").closest('.embed-responsive.banner-slider').remove(); //remove diant RED banner on model page
+        $("#profile-title.banner-sliders > .top-right").css('top','0px'); //move subscribe button to be visible (offest due to removing the red banner)
         $('a[href="https://www.xvideos.red"]').remove(); //remove PREMIUM button (next to account, top of page)
     },100);
     var html = `
