@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024.04.16.01
-// @description  try to take over the world!
+// @version      2024.04.16.02
+// @description  Remove Red and ads from xvideos and make QoL changes
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=xvideos.com
@@ -35,7 +35,7 @@
         if(init) {
             var el = document.createElement("span");
             el.innerHTML = html;
-            var div = document.getElementById("site-logo-link");
+            var div = document.getElementById("site-logo");
             insertAfter(div, el);
             init=false;
         }
