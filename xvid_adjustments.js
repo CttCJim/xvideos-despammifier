@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024-03-26
+// @version      2024.04.16
 // @description  try to take over the world!
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
@@ -20,6 +20,7 @@
     }
     var init=true;
     setInterval(function(){
+        $("#full-video-link-btn").remove(); //remove button "see the full video on Red"
         $(".videoad-title-invideo").remove(); //remove hovertext on video
         $(".premium-results-line").remove(); //remove red from search results
         $(".icon-f.icf-ticket-red.icf-white-fill").closest('.activity-event').remove(); //remove red search results
