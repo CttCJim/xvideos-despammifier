@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024.04.16
+// @version      2024.04.16.01
 // @description  try to take over the world!
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
@@ -31,7 +31,7 @@
         $(".banner-goto-redtab").closest('.embed-responsive.banner-slider').remove(); //remove giant RED banner on model page
         $("#profile-title.banner-sliders > .top-right").css('top','0px'); //move subscribe button to be visible (offest due to removing the red banner)
         $('a[href="https://www.xvideos.red"]').remove(); //remove PREMIUM button (next to account, top of page)
-        var html = `<span id="xvdespLogo" style="position:relative;left:-103px;color:#e1351f;font-weight:bold;font-size:2em;top: 13px;">Despammified!</span>`;
+        var html = `<span id="xvdespLogo" style="position:relative;left:-103px;color:#e1351f;font-weight:bold;font-size:2em;top: 13px;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">Despammified!</span>`;
         if(init) {
             var el = document.createElement("span");
             el.innerHTML = html;
