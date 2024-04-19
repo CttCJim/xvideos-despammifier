@@ -19,7 +19,7 @@
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
     var init=true;
-    setTimeout(function(){
+    $( document ).ready(function() {
         $("#full-video-link-btn").remove(); //remove button "see the full video on Red"
         $(".videoad-title-invideo").remove(); //remove hovertext on video
         $(".premium-results-line").remove(); //remove red from search results
