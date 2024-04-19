@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024.04.16.03
+// @version      2024.04.19.00
 // @description  Remove Red and ads from xvideos and make QoL changes
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
@@ -19,7 +19,7 @@
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
     var init=true;
-    setInterval(function(){
+    setTimeout(function(){
         $("#full-video-link-btn").remove(); //remove button "see the full video on Red"
         $(".videoad-title-invideo").remove(); //remove hovertext on video
         $(".premium-results-line").remove(); //remove red from search results
