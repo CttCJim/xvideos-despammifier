@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024.04.19.00
+// @version      2024.04.19.01
 // @description  Remove Red and ads from xvideos and make QoL changes
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
@@ -19,7 +19,16 @@
         referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     }
     var init=true;
-    $( document ).ready(function() {
+    var html = `<span id="xvdespLogo" style="position:relative;left:-103px;color:#e1351f;font-weight:bold;font-size:2em;top: 13px;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">Despammified!</span>`;
+    if(init) {
+        var el = document.createElement("span");
+        el.innerHTML = html;
+        var div = document.getElementById("site-logo");
+        insertAfter(div, el);
+        init=false;
+    }
+
+    function killstuff() {
         $("#full-video-link-btn").remove(); //remove button "see the full video on Red"
         $(".videoad-title-invideo").remove(); //remove hovertext on video
         $(".premium-results-line").remove(); //remove red from search results
@@ -32,19 +41,7 @@
         $(".banner-goto-redtab").closest('.embed-responsive.banner-slider').remove(); //remove giant RED banner on model page
         $("#profile-title.banner-sliders > .top-right").css('top','0px'); //move subscribe button to be visible (offest due to removing the red banner)
         $('a[href="https://www.xvideos.red"]').remove(); //remove PREMIUM button (next to account, top of page)
-        var html = `<span id="xvdespLogo" style="position:relative;left:-103px;color:#e1351f;font-weight:bold;font-size:2em;top: 13px;text-shadow:1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000;">Despammified!</span>`;
-        if(init) {
-            var el = document.createElement("span");
-            el.innerHTML = html;
-            var div = document.getElementById("site-logo");
-            insertAfter(div, el);
-            init=false;
-        }
-    },100);
-    var html = `
-    <style>
-    .premium-results-line {max-height:0px!important;}
-    </style>
-    `;
-    //document.body.innerHTML+=html;
+    }
+    setInterval(killstuff,100);
+    
 })();
