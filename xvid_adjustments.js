@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         xvid adjustments
 // @namespace    http://tampermonkey.net/
-// @version      2024.04.19.01
+// @version      2024.04.19.02
 // @description  Remove Red and ads from xvideos and make QoL changes
 // @author       CttCJim
 // @match        https://www.xvideos.com/*
