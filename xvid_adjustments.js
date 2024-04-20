@@ -32,8 +32,8 @@
         $("#full-video-link-btn").remove(); //remove button "see the full video on Red"
         $(".videoad-title-invideo").remove(); //remove hovertext on video
         $(".premium-results-line").remove(); //remove red from search results
-        $(".icon-f.icf-ticket-red.icf-white-fill").closest('.activity-event').remove(); //remove red search results
-        $(".icon-f.icf-ticket-red.icf-white-fill").closest('li').remove(); //remove red tab on tag page
+        $(".purchase-content-is-init").remove(); //remove videos with red tag on them
+        $(".search-premium-tabs").hide(); //hide FERR|RED tab in tag search
         $(".video-title").remove(); //remove hovertext on video
         $("#tab-videos-red").hide(); //remove red tab on model page
         $(".red-ticket").closest("li").remove(); //remove red from top menu
@@ -43,5 +43,4 @@
         $('a[href="https://www.xvideos.red"]').remove(); //remove PREMIUM button (next to account, top of page)
     }
     setInterval(killstuff,100);
-    
 })();
