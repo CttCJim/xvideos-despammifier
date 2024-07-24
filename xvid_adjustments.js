@@ -36,6 +36,7 @@
         $(".search-premium-tabs").hide(); //hide FERR|RED tab in tag search
         $(".video-title").remove(); //remove hovertext on video
         $("#tab-videos-red").hide(); //remove red tab on model page
+        $("#tab-posts").hide(); //remove red tab on model page
         $(".red-ticket").closest("li").remove(); //remove red from top menu
         $(".btn.btn-default.premium").hide(); //remove red tab on channel
         $(".banner-goto-redtab").closest('.embed-responsive.banner-slider').remove(); //remove giant RED banner on model page
